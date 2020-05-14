@@ -1,0 +1,94 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- modem_does_not_work
+- reboot_modem
+- check_modem
+- inform
+entities:
+- equipment
+- modem_api_service
+responses:
+  utter_greet:
+  - text: Hi, I am your personal Bell assistant. Ask me anything and I'll do my best
+      to try and help you!
+  - text: Hi, I am your personal Bell assistant. how can I help you?
+  utter_modem_reboot_help_start:
+  - text: Sure, I can help you with that
+  utter_modem_reboot_confirm_modem_has_power:
+  - text: First step is to confirm that your modem has power. Press the information
+      button on your Home Hub 3000
+  utter_modem_reboot_modem_plugged_question:
+  - text: 'Confirm that the modem is plugged in to the power supply? '
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_modem_reboot_can_be_solved_by_reboot:
+  - text: These issues can be solved with a modem reboot.
+  utter_modem_reboot_want_to_reboot_question:
+  - text: Do you want to reboot your modem?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_modem_reboot_connecting_to_your_modem:
+  - text: Connecting with your modem. Please hold.....
+  utter_modem_reboot_uptime_rebooting_options:
+  - text: What would you like to do?
+    buttons:
+    - title: Check Modem
+      payload: Check Modem
+    - title: Reboot Modem
+      payload: Reboot Modem
+  utter_modem_reboot_please_confirm_again:
+  - text: Please confirm again.
+  utter_modem_reboot_uptime_checking_again_options:
+  - text: Do you want to check modem uptime again?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_modem_reboot_resolve_your_issue_question:
+  - text: Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_modem_reboot_anything_else_can_i_do_question:
+  - text: Great! Is there anything else I can help you with today?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_modem_reboot_forwarding_to_router_bot:
+  - text: Forwarding to Router Bot
+actions:
+- utter_greet
+- utter_modem_reboot_help_start
+- utter_modem_reboot_confirm_modem_has_power
+- utter_modem_reboot_modem_plugged_question
+- utter_modem_reboot_want_to_reboot_question
+- utter_modem_reboot_connecting_to_your_modem
+- utter_modem_reboot_uptime_rebooting_options
+- action_Modem_Checking
+- utter_modem_reboot_can_be_solved_by_reboot
+- utter_modem_reboot_please_confirm_again
+- action_Modem_Reboot
+- utter_modem_reboot_uptime_checking_again_options
+- utter_modem_reboot_resolve_your_issue_question
+- utter_modem_reboot_anything_else_can_i_do_question
+- utter_modem_reboot_forwarding_to_router_bot
