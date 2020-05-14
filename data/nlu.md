@@ -14,6 +14,7 @@
 
 ## intent:modem_complain
 - [modem](equipment) does not work
+- [Modem](equipment) does not work
 - my [modem](equipment) does not work
 - [modem](equipment) is not working
 - [modem](equipment) stopped working
