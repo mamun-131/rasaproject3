@@ -12,13 +12,7 @@
 - see you around
 - see you later
 
-## intent:inform
-- [modem](equipment)
-- [router](equipment)
-- [reboot](modem_api_service)
-- [check](modem_api_service)
-
-## intent:modem_does_not_work
+## intent:modem_complain
 - [modem](equipment) does not work
 - my [modem](equipment) does not work
 - [modem](equipment) is not working
@@ -39,19 +33,30 @@
 - my [router](equipment) has some problems
 
 ## intent:reboot_modem
-- [modem](equipment) [reboot](modem_api_service) - Yes
-- I want to [reboot](modem_api_service) my [modem](equipment)
-- want to [reboot](modem_api_service) my [modem](equipment)
-- Yes, i want to [reboot](modem_api_service) my [modem](equipment)
-- Yes, want to [reboot](modem_api_service) [modem](equipment)
-- Want to [reboot](modem_api_service) [modem](equipment)
-- Reboot [modem](equipment)
+- modem reboot - Yes
+- I want to reboot my modem
+- want to reboot my modem
+- Yes, i want to reboot my modem
+- Yes, want to reboot modem
+- Want to reboot modem
+- Reboot modem
+- router reboot - Yes
+- I want to reboot my router
+- want to reboot my router
+- Yes, i want to reboot my router
+- Yes, want to reboot router
+- Want to reboot router
+- Reboot router
 
 ## intent:check_modem
-- [check](modem_api_service) [modem](equipment)
-- I want to check [modem](equipment)
-- [check](modem_api_service) the [modem](equipment) first
-- [modem](equipment) uptime [check](modem_api_service) again - Yes
+- check modem
+- I want to check modem
+- check the modem first
+- modem uptime check again - Yes
+- I want to check router
+- check the router first
+- router uptime check again - Yes
+- check router
 
 ## intent:affirm
 - yes

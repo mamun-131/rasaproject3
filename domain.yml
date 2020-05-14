@@ -9,10 +9,9 @@ intents:
 - mood_great
 - mood_unhappy
 - bot_challenge
-- modem_does_not_work
+- modem_complain
 - reboot_modem
 - check_modem
-- inform
 entities:
 - equipment
 - modem_api_service
@@ -76,6 +75,8 @@ responses:
       payload: No
   utter_modem_reboot_forwarding_to_router_bot:
   - text: Forwarding to Router Bot
+  utter_goodbye:
+  - text: Good Bye
 actions:
 - utter_greet
 - utter_modem_reboot_help_start
@@ -92,3 +93,4 @@ actions:
 - utter_modem_reboot_resolve_your_issue_question
 - utter_modem_reboot_anything_else_can_i_do_question
 - utter_modem_reboot_forwarding_to_router_bot
+- utter_goodbye

@@ -1,8 +1,9 @@
 ## modem reboot path 1
 * greet
   - utter_greet
-* modem_does_not_work
+* modem_complain{"equipment": "modem"}
   - utter_modem_reboot_help_start
+  - utter_modem_reboot_confirm_modem_has_power
   - utter_modem_reboot_modem_plugged_question
 * affirm
   - utter_modem_reboot_can_be_solved_by_reboot
@@ -25,7 +26,7 @@
 * affirm 
   - utter_modem_reboot_forwarding_to_router_bot
 
-## modem check directly
+## check modem
 * check_modem
   - action_Modem_Checking
   - utter_modem_reboot_please_confirm_again
@@ -40,3 +41,7 @@
   - utter_modem_reboot_anything_else_can_i_do_question
 * affirm 
   - utter_modem_reboot_forwarding_to_router_bot
+
+## story_goodbye
+* goodbye
+    - utter_goodbye
