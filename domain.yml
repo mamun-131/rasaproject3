@@ -12,10 +12,20 @@ intents:
 - modem_complain
 - reboot_modem
 - check_modem
+- out_of_scope
 entities:
 - equipment
 - modem_api_service
 responses:
+  utter_bot_top_line_options:
+  - text: Select any of the options.
+    buttons:
+    - title: Modem does not work
+      payload: Modem does not work
+    - title: Internet is very slow
+      payload: Internet is very slow
+    - title: Other internet issue
+      payload: Other internet issue
   utter_greet:
   - text: Hi, I am your personal Bell assistant. Ask me anything and I'll do my best
       to try and help you!
@@ -27,6 +37,29 @@ responses:
       button on your Home Hub 3000
   utter_modem_reboot_modem_plugged_question:
   - text: 'Confirm that the modem is plugged in to the power supply? '
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_modem_reboot_modem_light_on_question:
+  - text: Are the lights on your modem on?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_modem_reboot_modem_try_plugin_then_check_power_question:
+  - text: Try plugging in your modem the power outlet and wait for lights to turn
+      on. Does your modem have power now?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_modem_reboot_modem_try_check_power_outlet_question:
+  - text: This may be an issue with your power supply. Try plugging another device
+      into the same outlet. Does the outlet have power?
     buttons:
     - title: Yes
       payload: Yes
@@ -67,7 +100,7 @@ responses:
     - title: No
       payload: No
   utter_modem_reboot_anything_else_can_i_do_question:
-  - text: Great! Is there anything else I can help you with today?
+  - text: Is there anything else I can help you with today?
     buttons:
     - title: Yes
       payload: Yes
@@ -75,13 +108,40 @@ responses:
       payload: No
   utter_modem_reboot_forwarding_to_router_bot:
   - text: Forwarding to Router Bot
+  utter_connect_to_human_agent:
+  - text: Would you like to connect with a live Bell representative?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_apologize:
+  - text: We apologize we were unable to help you. Please contact us by telephone
+      for additional support.
+  utter_sorry:
+  - text: I am sorry.
   utter_goodbye:
   - text: Good Bye
+  utter_default:
+  - text: Sorry, I didn't get that 🤷. Could you please rephrase?
+  - text: I didn't understand, could you rephrase that?
+  - text: I'm sorry, but I didn't understand you. Could you please rephrase what you
+      just said?
+  - text: I'm afraid I didn't get what you just said. Could you rephrase that?
+  - text: I didn't quite get that, could you rephrase your message?
+  - text: Could you rephrase your message? I didn't get it, I'm sorry.
+  utter_ask_affirmation:
+  - text: Did you mean?
+  utter_ask_rephrase:
+  - text: Please rephrase again
 actions:
 - utter_greet
 - utter_modem_reboot_help_start
 - utter_modem_reboot_confirm_modem_has_power
 - utter_modem_reboot_modem_plugged_question
+- utter_modem_reboot_modem_light_on_question
+- utter_modem_reboot_modem_try_plugin_then_check_power_question
+- utter_modem_reboot_modem_try_check_power_outlet_question
 - utter_modem_reboot_want_to_reboot_question
 - utter_modem_reboot_connecting_to_your_modem
 - utter_modem_reboot_uptime_rebooting_options
@@ -93,4 +153,11 @@ actions:
 - utter_modem_reboot_resolve_your_issue_question
 - utter_modem_reboot_anything_else_can_i_do_question
 - utter_modem_reboot_forwarding_to_router_bot
+- utter_connect_to_human_agent
+- utter_apologize
+- utter_sorry
 - utter_goodbye
+- utter_bot_top_line_options
+- utter_default
+- utter_ask_affirmation
+- utter_ask_rephrase
