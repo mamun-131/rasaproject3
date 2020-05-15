@@ -52,10 +52,11 @@ class ModemRebootingAction(Action):
         #inventory = "888888"
         results = requests.get("https://asksupplychain.herokuapp.com/inventory?query=444444444444").json()
         if results:
-            #inventory = results[0]["Inventory"]
+            inventory = results[0]["Inventory"]
            # modemstatus = "Successful"
             dispatcher.utter_message("Successfully connected to the modem. I'm rebooting your modem now, it should take about 2 minutes.")
         else:
             dispatcher.utter_message("Modem is not responding")
 
-        return []
+        return[]
+       # return [SlotSet("inventory_value", inventory)]

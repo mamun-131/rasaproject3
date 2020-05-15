@@ -16,6 +16,9 @@ intents:
 entities:
 - equipment
 - modem_api_service
+slots:
+  inventory_value:
+    type: unfeaturized
 responses:
   utter_bot_top_line_options:
   - text: Select any of the options.
